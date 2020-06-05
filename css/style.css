@@ -250,10 +250,10 @@ div[class^='bar-'] {
   margin: 2.7px;
 }
 
-.bar-html,
-.bar-css,
+.bar-ruby,
+.bar-elixir,
 .bar-javascript,
-.bar-react {
+.bar-elm {
   width: calc(0 - 6px);
 }
 

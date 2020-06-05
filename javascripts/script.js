@@ -7,17 +7,18 @@ spans.forEach(span => span.addEventListener('mouseout', function(e){
   span.classList.remove('animated', 'rubberBand')
 }))
 
-const htmlBar = document.querySelector('.bar-html')
-const cssBar = document.querySelector('.bar-css')
+const rubyBar = document.querySelector('.bar-ruby')
 const jsBar = document.querySelector('.bar-javascript')
-const reactBar = document.querySelector('.bar-react')
+const elixirBar = document.querySelector('.bar-elixir')
+const elmBar = document.querySelector('.bar-elm')
 
-var tl = new TimeLineLite()
+const newLocal = "power4.out"
+var tl = gsap.timeline({ defaults: { duration: 1, ease: newLocal } });
 
-tl.fromTo(htmlBar, .75, { width: `calc(0% - 6px)` }, { width: `calc(90% - 6px)`, ease: Power4.easeOut})
-  .fromTo(cssBar, .75, { width: `calc(0% - 6px)` }, { width: `calc(95% - 6px)`, ease: Power4.easeOut})
-  .fromTo(jsBar, .75, { width: `calc(0% - 6px)` }, { width: `calc(70% - 6px)`, ease: Power4.easeOut})
-  .fromTo(reactBar, .75, { width: `calc(0% - 6px)` }, { width: `calc(20% - 6px)`, ease: Power4.easeOut})
+tl.to(rubyBar, { width: `calc(90% - 6px)` })
+  .to(jsBar, { width: `calc(65% - 6px)` })
+  .to(elixirBar, { width: `calc(35% - 6px)` })
+  .to(elmBar, { width: `calc(20% - 6px)` })
 
 
 const controller = new ScrollMagic.Controller()
@@ -50,3 +51,15 @@ const showRequiredCategory = event => {
   getCategory.classList.remove('hideCategory')
   getCategory.classList.add('showCategory')
 }
+
+
+// class Validator {
+//   addValidation(attr, req, message) {
+//     console.log(attr)
+//   }
+// }
+
+// var validator = new Validator("contactform");
+// validator.addValidation("name","req","Please provide your name");
+// validator.addValidation("email","req","Please provide your email");
+// validator.addValidation("email","email", "Please enter a valid email address")
