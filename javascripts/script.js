@@ -52,14 +52,16 @@ const showRequiredCategory = event => {
   getCategory.classList.add('showCategory')
 }
 
+var contactFormFields = document.getElementsByClassName('contact-field');
 
-// class Validator {
-//   addValidation(attr, req, message) {
-//     console.log(attr)
-//   }
-// }
-
-// var validator = new Validator("contactform");
-// validator.addValidation("name","req","Please provide your name");
-// validator.addValidation("email","req","Please provide your email");
-// validator.addValidation("email","email", "Please enter a valid email address")
+for(var i = 0; i < contactFormFields.length; i++) {
+  (function(index) {
+    contactFormFields[index].addEventListener('focusout', function() {
+      if(this.value === '') {
+        document.getElementById('error-' + index).classList.add('show')
+      } else {
+        document.getElementById('error-' + index).classList.remove('show')
+      }
+    });
+  })(i);
+};
