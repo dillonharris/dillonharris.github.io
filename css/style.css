@@ -343,3 +343,23 @@ footer p {
   font-size: 1.2rem;
   padding: 30px 0;
 }
+
+/* Errors */
+#error-0, #error-1, #error-2 {
+  background-color: #fce4e4;
+  border: 1px solid #cc0033;
+  position: relative;
+  width: 500px;
+  padding: 20px 30px;
+  left: 50%;
+  right: 50%;
+  transform: translateX(-50%);
+  color: #cc0033;
+  font-family: Helvetica, Arial, sans-serif;
+  margin-top: -15px;
+  display: none;
+}
+
+.show {
+  display: block !important;
+}
